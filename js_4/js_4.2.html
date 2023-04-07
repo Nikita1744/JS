@@ -1,0 +1,30 @@
+<body>
+<script>
+arr = new Array(10);s='';
+for (i=0;i<arr.length;i++)
+{
+y=Math.random()*10+(-5);
+arr[i]=Math.floor(y);
+s=s+' '+arr[i];
+}
+alert(s)
+min=0;
+arr1=new Array();s='';
+for (i=0; i<=arr.length;i++)
+{
+	if(arr[i]>=0) arr1[i]=Math.floor(arr[i]); s = s+' '+arr1[i];
+}
+arr1.sort();
+minimum=arr1[0];
+k=10;
+for(i=arr.length;i>=0;i--)
+{
+	if(minimum == arr[i])
+	{
+		alert("маскимальный индекс минимального элемента :" +k)
+		break;
+	}
+k=k-1;
+}
+</script>
+</body>

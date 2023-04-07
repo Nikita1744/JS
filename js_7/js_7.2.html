@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+i=0;
+function f()
+{
+r1 = document.getElementById('e1')
+r2=document.getElementById('e2');
+if (i==0)
+{
+r1.style.color = 'red'
+r2.value='Красный';
+i=1;
+}
+else
+{
+r1.style.color='green';
+r2.value='Зеленый';
+i=0;
+}
+}
+</script>
+</head>
+<body>
+<style>
+span
+{
+color: red
+}
+</style>
+<input type="button" id = 'e2' value="Красный" onClick="f();">
+<span id = 'e1' ">Hello,world</span>
+</body>
+</html>
