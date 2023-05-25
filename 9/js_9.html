@@ -1,0 +1,44 @@
+<head>
+<body>
+    <div class="wrapper">
+        <div class="img1"></div>
+        <div class="img2"></div>
+    </div>
+
+    <script>
+        img2 = document.querySelector('.img2')
+        x = 0
+        img2.top = `${x}%`
+        timeOut = setInterval(() => {
+            // img2.style.top -= 10
+            x+=1
+            img2.style.top = `${x}%`
+            if (x == 80) {
+                clearInterval(timeOut);
+            }
+        }, 50)
+    </script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            width: 50%;
+            position: relative;
+        }
+        .img1 {
+            background-color: black;
+            width: 100%;
+            height: 500px;
+        }
+        .img2 {
+            background-color: purple;
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</body>
+</head>
